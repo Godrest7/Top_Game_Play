@@ -286,9 +286,9 @@ function updateGames(title, year, imageUrl, gameId) {
 
 function modifyFom(gameData) {
     const form = document.querySelector("form");
-    form.querySelector("#title").value = gameData.title; // Met à jour le champ Title
-    form.querySelector("#year").value = gameData.year;   // Met à jour le champ Year
-    form.querySelector("#ImageUrl").value = gameData.imageUrl; // Met à jour le champ Image URL
+	form.title.value = gameData.title
+	form.year.value = gameData.year
+	form.imageUrl.value = gameData.imageUrl
 
     // Met à jour l'aperçu de l'image
     const imagePreview = document.querySelector("#imagePreview");
