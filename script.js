@@ -67,10 +67,19 @@ function writeDom() {
 }
 */
 
+/*
 function writeDom() {
 	gamesList.forEach((game) => {
 		const articleContainer = document.querySelector(".row")
 		articleContainer.innerHTML += `<h2>Hello !! ${ Math.random() } </h2>`
+	})
+}
+*/
+
+function writeDom() {
+	gamesList.forEach((game) => {
+		const articleContainer = document.querySelector(".row")
+		articleContainer.innerHTML += `<h2>${game.title} </h2>`
 	})
 }
 
