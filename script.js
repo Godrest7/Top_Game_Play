@@ -98,7 +98,8 @@ function writeDom() {
                                 </text>
                             </svg>
                             <div class="card-body">
-                                <p class="card-text">Description du jeu.</p>
+                            <h3 class="card-title">${game.title}</h3>
+                                <p class="card-text">${game.year}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary"
