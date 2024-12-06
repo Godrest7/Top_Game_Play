@@ -199,12 +199,21 @@ function viewModal(gameId) {
 	const modalBody = `<img src="${gamesList[result].imageUrl}" alt="${gamesList[result].title}" class="img-fluid" />`
 	modifyModal(gamesList[result].title, modalBody)
 }
+/*
 function editModal(gameId) {
 	// console.log(gameId, gamesList)
 	// Trouvez le jeu en fonction de son identifiant
 	const result = gamesList.findIndex((game) => game.id === parseInt(gameId))
 	modifyModal("Mode Edition")
-    
+}*/
+
+function editModal(gameId) {
+	// console.log(gameId, gamesList)
+	// Trouvez le jeu en fonction de son identifiant
+	const result = gamesList.findIndex((game) => game.id === parseInt(gameId))
+	// passer une image comme corps du modal
+	const modalBody = `<h4>ajoutez un formulaire pour modifier le jeu ici</h4>`
+	modifyModal("Mode Edition", modalBody)
 }
 
 /*
