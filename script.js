@@ -285,3 +285,17 @@ function modifyFom(gameData) {
         imagePreview.style.display = 'block';
     }
 }
+
+function modifyModal(modalTitle, modalBody) {
+	// Écrire le nom du jeu dans le titre du modal
+	document.querySelector(".modal-title").textContent = modalTitle
+	// Écrire dans le corps du modal
+	document.querySelector(".modal-body").innerHTML = modalBody
+	// Écrire dans le footer
+	document.querySelector(".modal-footer").innerHTML = `
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+			Close
+		</button>
+		<button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Submit</button>
+</form>`
+}
