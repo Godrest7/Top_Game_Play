@@ -262,8 +262,14 @@ function editModal(gameId) {
 		data.text().then((form) => {
 			// Modifiez le titre et le corps du modal
 			modifyModal("Mode Edition", form)
+			modifyFom()
 		})
 	})
 	const selectedGame = gamesList[result]
 	console.log(selectedGame)
+}
+
+function modifyFom() {
+	const form = document.querySelector("form")
+	console.log(form)
 }
