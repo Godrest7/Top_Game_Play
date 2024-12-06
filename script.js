@@ -131,6 +131,7 @@ function writeDom() {
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary view"
                                         data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                        data-edit-id="${game.id}"
                                         >View</button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary edit"
                                         data-bs-toggle="modal" data-bs-target="#exampleModal"
