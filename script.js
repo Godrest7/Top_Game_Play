@@ -190,7 +190,15 @@ function editModal(gameId) {
     document.querySelector(".modal-title").textContent = gamesList[result].title
 }
 
+/*
 function modifyModal(modalTitle) {
 	// Écrir le nom du jeu dans le titre du modal
 	document.querySelector(".modal-title").textContent = modalTitle
+}
+*/
+
+function modifyModal(modalTitle, modalBody) {
+	// Écrir le nom du jeu dans le titre du modal
+	document.querySelector(".modal-title").textContent = modalTitle
+	document.querySelector(".modal-body").innerHTML = modalBody
 }
