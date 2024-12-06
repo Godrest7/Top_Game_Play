@@ -129,10 +129,10 @@ function writeDom() {
                                 <p class="card-text">${game.year}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary edit"
+                                        <button type="button" class="btn btn-sm btn-outline-secondary "
                                         data-bs-toggle="modal" data-bs-target="#exampleModal"
                                         >View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        <button type="button" class="btn btn-sm btn-outline-secondary edit"
                                         data-bs-toggle="modal" data-bs-target="#exampleModal"
                                         data-edit-id="${game.id}"
                                         >Edit</button>
