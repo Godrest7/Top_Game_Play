@@ -56,4 +56,4 @@ function writeDom() {
 	})
 }
 
-writeDom
+writeDom()
