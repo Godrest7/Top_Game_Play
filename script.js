@@ -187,5 +187,6 @@ function editModal(gameId) {
 	// Trouvez le jeu en fonction de son identifiant
 	const result = gamesList.findIndex((game) => game.id === parseInt(gameId))
 	modifyModal("Mode Edition")
+    document.querySelector(".modal-title").textContent = gamesList[result].title
 }
 
