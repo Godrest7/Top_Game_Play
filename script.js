@@ -269,13 +269,20 @@ function editModal(gameId) {
 				imageUrl: selectedGame.imageUrl,
 			})
 			document
-			.querySelector('button[type="submit"]')
-			.addEventListener("click", () =>
-				updateGames(title.value, year.value, imageUrl.value, gameId)
-			)
+				.querySelector('button[type="submit"]')
+				.addEventListener("click", () =>
+					updateGames(title.value, year.value, imageUrl.value, gameId)
+				)
 		})
 	})
 }
+
+
+
+function updateGames(title, year, imageUrl, gameId) {
+	console.log(title, year, imageUrl, gameId)
+}
+
 
 function modifyFom(gameData) {
     const form = document.querySelector("form");
@@ -303,8 +310,4 @@ function modifyModal(modalTitle, modalBody) {
 		</button>
 		<button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Submit</button>
 </form>`
-}
-
-function updateGames(title, year, imageUrl, gameId) {
-	console.log(title, year, imageUrl, gameId)
 }
