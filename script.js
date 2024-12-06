@@ -184,15 +184,21 @@ function viewModal(gameId) {
 	modifyModal(gamesList[result].title)
     document.querySelector(".modal-title").textContent = gamesList[result].title
 }*/
-
+/*
 function viewModal(gameId) {
 	// console.log(gameId, gamesList)
 	// Trouvez le jeu en fonction de son identifiant
 	const result = gamesList.findIndex((game) => game.id === parseInt(gameId))
 	const modalBody = `<h2>Hello world !!</h2>`
 	modifyModal(gamesList[result].title, modalBody)
+}*/
+function viewModal(gameId) {
+	// console.log(gameId, gamesList)
+	// Trouvez le jeu en fonction de son identifiant
+	const result = gamesList.findIndex((game) => game.id === parseInt(gameId))
+	const modalBody = `<img src="${gamesList[result].imageUrl}" alt="${gamesList[result].title}" class="img-fluid" />`
+	modifyModal(gamesList[result].title, modalBody)
 }
-
 function editModal(gameId) {
 	// console.log(gameId, gamesList)
 	// Trouvez le jeu en fonction de son identifiant
