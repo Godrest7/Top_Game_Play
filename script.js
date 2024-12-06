@@ -49,10 +49,19 @@ gamesList.forEach((game) => {
 })
 */
 
+/*
 function writeDom() {
 	gamesList.forEach((game) => {
 		const articleContainer = document.querySelector(".row")
 		articleContainer.innerHTML = "Hello !!"
+	})
+}
+*/
+
+function writeDom() {
+	gamesList.forEach((game) => {
+		const articleContainer = document.querySelector(".row")
+		articleContainer.innerHTML += `<h2>Hello !!</h2>`
 	})
 }
 
