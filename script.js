@@ -268,6 +268,9 @@ function editModal(gameId) {
 				year: selectedGame.year,
 				imageUrl: selectedGame.imageUrl,
 			})
+			document
+			.querySelector('button[type="submit"]')
+			.addEventListener("click", updateGames)
 		})
 	})
 }
@@ -298,4 +301,8 @@ function modifyModal(modalTitle, modalBody) {
 		</button>
 		<button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Submit</button>
 </form>`
+}
+
+function updateGames() {
+	console.log("running update games ...")
 }
