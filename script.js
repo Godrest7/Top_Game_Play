@@ -270,7 +270,9 @@ function editModal(gameId) {
 			})
 			document
 			.querySelector('button[type="submit"]')
-			.addEventListener("click", updateGames)
+			.addEventListener("click", () =>
+				updateGames(title.value, year.value, imageUrl.value, gameId)
+			)
 		})
 	})
 }
@@ -303,6 +305,6 @@ function modifyModal(modalTitle, modalBody) {
 </form>`
 }
 
-function updateGames() {
-	console.log("running update games ...")
+function updateGames(title, year, imageUrl, gameId) {
+	console.log(title, year, imageUrl, gameId)
 }
