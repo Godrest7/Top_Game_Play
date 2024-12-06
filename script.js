@@ -3,7 +3,7 @@ const gamesList = [
 		title: "Detroit: Become Human",
 		year: 2018,
 		imageUrl:
-			"https://wallpaperaccess.com/full/1489919.jpg",
+			"https://assetsio.reedpopcdn.com/-1546255277221.jpg?width=1200&height=630&fit=crop&enable=upscale&auto=webp",
 		id: 1,
 	},
 	{
@@ -42,3 +42,7 @@ const gamesList = [
 		id: 6,
 	},
 ]
+
+gamesList.forEach((game) => {
+    console.log(game)
+})
