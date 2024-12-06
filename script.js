@@ -42,11 +42,11 @@ const gamesList = [
 		id: 6,
 	},
     {
-    title: "Tekken",
-    year: 1994,
-    imageUrl:
-        "https://cdn.dashfight.com/bcf6a9046a9ea4c1070d4aedb2981103c978a704.png",
-    id: 7,
+        title: "Tekken",
+        year: 1994,
+        imageUrl:
+            "https://cdn.dashfight.com/bcf6a9046a9ea4c1070d4aedb2981103c978a704.png",
+        id: 7,
     },
     {
         title: "Minecraft",
@@ -75,7 +75,8 @@ const gamesList = [
         imageUrl:
             "https://gagadget.com/media/post_big/valhallarelease.jpg",
         id: 11,
-    },  {
+    },  
+    {
         title: "Skyrim",
         year: 2011,
         imageUrl:
