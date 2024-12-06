@@ -31,7 +31,7 @@ const gamesList = [
 		title: "The Last of Us",
 		year: 2013,
 		imageUrl:
-			"https://www.4gamer.net/games/636/G063663/20220830067/SS/032.jpg",
+			"https://th.bing.com/th/id/OIP.a3kEBqO2PRvB2VTjKPhYmQHaEK?rs=1&pid=ImgDetMain",
 		id: 5,
 	},
 	{
