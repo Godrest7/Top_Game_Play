@@ -80,7 +80,7 @@ const gamesList = [
         year: 2011,
         imageUrl:
             "https://gaming-cdn.com/images/products/146/orig/the-elder-scrolls-v-skyrim-pc-jeu-steam-europe-cover.jpg?v=1661270991",
-        id: 11,
+        id: 12,
     },
 ]
 
@@ -139,7 +139,7 @@ function writeDom() {
                                 </div>
                             </div>
                         </div>
-                    </article>  `
+                    </article> `
 	})
 }
 
