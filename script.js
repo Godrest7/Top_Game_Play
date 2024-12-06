@@ -150,9 +150,17 @@ const editButtons = document.querySelectorAll(".edit")
 console.log(editButtons)
 */
 
+/*
 const editButtons = document.querySelectorAll(".edit")
 editButtons.forEach((btn) => {
 	btn.addEventListener("click", () => {
 		console.log("hello edit !!!")
+	})
+})
+    */
+const editButtons = document.querySelectorAll(".edit")
+editButtons.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		console.log(e.target.getAttribute("data-edit-id"))
 	})
 })
