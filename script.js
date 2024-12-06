@@ -41,6 +41,47 @@ const gamesList = [
 			"https://wallpapercave.com/wp/wp6601789.jpg",
 		id: 6,
 	},
+    {
+    title: "Tekken",
+    year: 1994,
+    imageUrl:
+        "https://cdn.dashfight.com/bcf6a9046a9ea4c1070d4aedb2981103c978a704.png",
+    id: 7,
+    },
+    {
+        title: "Minecraft",
+        year: 2009,
+        imageUrl:
+            "https://m.media-amazon.com/images/I/61smNbXSW1L._AC_UF1000,1000_QL80_.jpg",
+        id: 8,
+    },
+    {
+        title: "Elden Ring",
+        year: 2022,
+        imageUrl:
+            "https://pic.clubic.com/v1/images/1934271/raw?fit=smartCrop&width=1200&height=675&hash=e7519a9577a2b7291fa26880bb22bed6740836be",
+        id: 9,
+    },
+    {
+        title: "Half Life 2",
+        year: 2004,
+        imageUrl:
+            "https://gaming-cdn.com/images/products/2284/orig/half-life-2-pc-mac-game-steam-cover.jpg?v=1650555068",
+        id: 10,
+    },
+    {
+        title: "God of War Ragnarök: Valhalla",
+        year: 2023,
+        imageUrl:
+            "https://gagadget.com/media/post_big/valhallarelease.jpg",
+        id: 11,
+    },  {
+        title: "Skyrim",
+        year: 2011,
+        imageUrl:
+            "https://gaming-cdn.com/images/products/146/orig/the-elder-scrolls-v-skyrim-pc-jeu-steam-europe-cover.jpg?v=1661270991",
+        id: 11,
+    },
 ]
 
 /*
