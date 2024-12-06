@@ -176,15 +176,15 @@ viewButtons.forEach((btn) => {
 	})
 })
 
-
+/*
 function viewModal(gameId) {
 	// console.log(gameId, gamesList)
 	// Trouvez le jeu en fonction de son identifiant
 	const result = gamesList.findIndex((game) => game.id === parseInt(gameId))
 	modifyModal(gamesList[result].title)
     document.querySelector(".modal-title").textContent = gamesList[result].title
-}
-/*
+}*/
+
 function viewModal(gameId) {
 	// console.log(gameId, gamesList)
 	// Trouvez le jeu en fonction de son identifiant
@@ -192,7 +192,7 @@ function viewModal(gameId) {
 	const modalBody = `<h2>Hello world !!</h2>`
 	modifyModal(gamesList[result].title, modalBody)
 }
-/*
+
 function editModal(gameId) {
 	// console.log(gameId, gamesList)
 	// Trouvez le jeu en fonction de son identifiant
