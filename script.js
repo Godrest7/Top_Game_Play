@@ -273,8 +273,15 @@ function editModal(gameId) {
 }
 
 function modifyFom(gameData) {
-	const form = document.querySelector("form")
-	form.title.value = gameData.title
-	form.year.value = gameData.year
-	form.imageUrl.value = gameData.imageUrl
+    const form = document.querySelector("form");
+    form.querySelector("#title").value = gameData.title; // Met à jour le champ Title
+    form.querySelector("#year").value = gameData.year;   // Met à jour le champ Year
+    form.querySelector("#ImageUrl").value = gameData.imageUrl; // Met à jour le champ Image URL
+
+    // Met à jour l'aperçu de l'image
+    const imagePreview = document.querySelector("#imagePreview");
+    if (imagePreview) {
+        imagePreview.src = gameData.imageUrl;
+        imagePreview.style.display = 'block';
+    }
 }

@@ -1,36 +1,46 @@
 <form>
-	
 	<div class="mb-3">
-		<label for="title" class="form-label">Title</label>
-		<input
-			type="text"
-			class="form-control"
-			id="title"
-			aria-describedby="tilteHelp"
-		/>			
+	  <label for="title" class="form-label">Title</label>
+	  <input
+		type="text"
+		class="form-control"
+		id="title"
+		aria-describedby="titleHelp"
+		placeholder="Enter game title"
+	  />
 	</div>
-
+  
 	<div class="mb-3">
-		<label for="year" class="form-label">Year</label>
-		<input
-			type="number"
-			class="form-control"
-			id="year"
-			aria-describedby="yearHelp"
-		/>			
+	  <label for="year" class="form-label">Year</label>
+	  <input
+		type="number"
+		class="form-control"
+		id="year"
+		aria-describedby="yearHelp"
+		placeholder="Enter release year"
+	  />
 	</div>
-
+  
 	<div class="mb-3">
-		<label for="ImageUrl" class="form-label">Image Url</label>
-		<input
-			type="text"
-			class="form-control"
-			id="ImageUrl"
-			aria-describedby="ImageUrlHelp"
-		/>			
+	  <label for="ImageUrl" class="form-label">Image Url</label>
+	  <input
+		type="text"
+		class="form-control"
+		id="ImageUrl"
+		aria-describedby="ImageUrlHelp"
+		placeholder="Enter image URL"
+		oninput="updateImagePreview()"
+	  />
 	</div>
-
-	<button type="submit" class="btn btn-primary">submit</button>
-
-</form>
-
+  
+	<img
+	  id="imagePreview"
+	  class="image-preview img-fluid"
+	  src=""
+	  alt="Image preview will appear here"
+	  style="display: none; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;"
+	/>
+  
+	<button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+  
