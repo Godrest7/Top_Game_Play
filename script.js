@@ -144,5 +144,14 @@ function writeDom() {
 
 writeDom()
 
+/*
 const editButtons = document.querySelectorAll(".edit")
 console.log(editButtons)
+*/
+
+const editButtons = document.querySelectorAll(".edit")
+editButtons.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		console.log("hello edit !!!")
+	})
+})
