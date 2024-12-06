@@ -159,9 +159,33 @@ editButtons.forEach((btn) => {
 	})
 })
     */
+
+
 const editButtons = document.querySelectorAll(".edit")
 editButtons.forEach((btn) => {
 	btn.addEventListener("click", (e) => {
 		console.log(e.target.getAttribute("data-edit-id"))
 	})
 })
+  
+const viewButtons = document.querySelectorAll(".view")
+viewButtons.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		viewModal(e.target.getAttribute("data-edit-id"))
+	})
+})
+
+function viewModal(gameId) {
+	// console.log(gameId, gamesList)
+	// Trouvez le jeu en fonction de son identifiant
+	const result = gamesList.findIndex((game) => game.id === parseInt(gameId))
+	modifyModal(gamesList[result].title)
+}
+
+function editModal(gameId) {
+	// console.log(gameId, gamesList)
+	// Trouvez le jeu en fonction de son identifiant
+	const result = gamesList.findIndex((game) => game.id === parseInt(gameId))
+	modifyModal("Mode Edition")
+}
+
