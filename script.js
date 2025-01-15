@@ -79,28 +79,54 @@ function modifyModal(modalTitle, modalBody) {
 		<button type="submit" class="btn btn-primary">Submit</button>`;
 }
 
-// Function to open edit modal
-function editModal(carId) {
-	const car = carsList.find((car) => car.id === parseInt(carId));
-	if (!car) return;
+function editModal(gameId) {
+	// Trouvez le jeu en fonction de son identifiant
+	console.log(gameId)
+	// fetch car by ID // http://localhost:3000/api/cars/1
+	fetch(`http://localhost:3000/api/cars/${gameId}`, {
+		method: "GET",
+		headers: {
+			"x-api-key": "secret_phrase_here",
+			"Content-Type": "application/json",
+			Accept: "application/json",
+		},
+	})
+		.then((res) => {
+			if (!res.ok) {
+				throw new Error("Error with the car with this id")
+			}
+			res.json().then((data) => {
+				console.log(data)
+				const selectedCar = data
 
-	fetch("./form.html")
-		.then((response) => response.text())
-		.then((form) => {
-			modifyModal("Edit Car", form);
-			populateForm(car);
+				// Injectez le formulaire dans le corps du modal
+				fetch("./form.html").then((data) => {
+					console.log(selectedCar)
 
-			document.querySelector('button[type="submit"]').addEventListener("click", () => {
-				updateCar(
-					document.querySelector("form").title.value,
-					document.querySelector("form").year.value,
-					document.querySelector("form").imageUrl.value,
-					carId
-				);
-			});
+					data.text().then((form) => {
+						// Modifiez le titre et le corps du modal
+
+						modifyModal("Mode Edition", form)
+						modifyFom({
+							title: selectedCar.carName,
+							year: selectedCar.carYear,
+							imageUrl: selectedCar.carImage,
+						})
+						document.querySelector(".form-img").src = selectedCar.carImage
+						document
+							.querySelector('button[type="submit"]')
+							.addEventListener("click", () =>
+								updateGames(title.value, year.value, imageUrl.value, gameId)
+							)
+					})
+				})
+			})
 		})
-		.catch((error) => console.error("Error loading form:", error));
+		.catch((error) =>
+			console.error("Erreur lors de la récupération des voitures :", error)
+		)
 }
+
 
 // Function to populate the form with car data
 function populateForm(carData) {
@@ -133,4 +159,18 @@ function viewModal(carId) {
 
 	const modalBody = `<img src="${car.imageUrl}" alt="${car.title}" class="img-fluid" />`;
 	modifyModal(car.title, modalBody);
+}
+
+function modifyFom(gameData) {
+    const form = document.querySelector("form");
+	form.title.value = gameData.title
+	form.year.value = gameData.year
+	form.imageUrl.value = gameData.imageUrl
+
+    // Met à jour l'aperçu de l'image
+    const imagePreview = document.querySelector("#imagePreview");
+    if (imagePreview) {
+        imagePreview.src = gameData.imageUrl;
+        imagePreview.style.display = 'block';
+    }
 }
