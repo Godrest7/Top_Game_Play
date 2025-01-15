@@ -72,3 +72,5 @@ function checkLogIn() {
 			console.log(error)
 		})
 }
+
+checkLogIn()
