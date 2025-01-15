@@ -1,5 +1,4 @@
-const cors = require('cors');
-app.use(cors());
+
 
 
 // Global variable to store the list of cars
@@ -26,7 +25,7 @@ fetch("http://localhost:3000/api/cars", {
 		setupEventListeners(); // Setup listeners for buttons
 	})
 	.catch((error) => console.error("Error fetching cars data:", error));
-ù
+
 // Function to populate the DOM
 function writeDom() {
 	const articleContainer = document.querySelector(".row");
@@ -36,10 +35,10 @@ function writeDom() {
 		articleContainer.innerHTML += `
 			<article class="col">
 				<div class="card shadow-sm">
-					<img src="${car.imageUrl}" alt="${car.title}" class="card-img-top" />
+					<img src="${car.carImage}" alt="${car.carName}" class="card-img-top" />
 					<div class="card-body">
-						<h3 class="card-title">${car.title}</h3>
-						<p class="card-text">${car.year}</p>
+						<h3 class="card-title">${car.carName}</h3>
+						<p class="card-text">${car.carYear}</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
 								<button type="button" class="btn btn-sm btn-outline-secondary view" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${car.id}">View</button>
