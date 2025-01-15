@@ -1,15 +1,33 @@
 const form = document.querySelector("form")
 
 form.addEventListener("submit", (e) => {
-	e.preventDefault()
-	const email = form.email.value
-	const userName = form.userName.value
-	const formdata = {
-		email,
-		userName,
-	}
-	console.log(formdata)
-})
+    e.preventDefault();
+    const email = form.email.value;
+    const userName = form.userName.value;
+
+    // Validation du formulaire
+    try {
+        validateEmail(email);
+    } catch (error) {
+        showError(error);
+        return console.error(error);
+    }
+
+    try {
+        validateName(userName);
+    } catch (error) {
+        showError(error);
+        return console.error(error);
+    }
+
+    const formdata = {
+        email,
+        userName,
+    };
+
+    console.log(formdata);
+});
+
 
 // input validation
 
