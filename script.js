@@ -153,12 +153,38 @@ function updateCar(title, year, imageUrl, carId) {
 }
 
 // Function to open view modal
-function viewModal(carId) {
-	const car = carsList.find((car) => car.id === parseInt(carId));
-	if (!car) return;
-
-	const modalBody = `<img src="${car.imageUrl}" alt="${car.title}" class="img-fluid" />`;
-	modifyModal(car.title, modalBody);
+function viewModal(gameId) {
+	// Trouvez le jeu en fonction de son identifiant
+	fetch(`http://localhost:3000/api/cars/${gameId}`, {
+		method: "GET",
+		headers: {
+			"x-api-key": "secret_phrase_here",
+			"Content-Type": "application/json",
+			Accept: "application/json",
+		},
+	})
+		.then((res) => {
+			if (!res.ok) {
+				throw new Error("Error with the car with this id")
+			}
+			res.json().then((data) => {
+				console.log(data)
+				const selectedCar = data
+				// passer une image comme corps du modal
+				const modalBody = `<img src="${selectedCar.carImage}" alt="${selectedCar.carName}" class="img-fluid" />`
+				modifyModal(selectedCar.carName, modalBody)
+				// edit footer
+				// Écrire dans le footer
+				document.querySelector(".modal-footer").innerHTML = `
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+			Close
+		</button>
+</form>`
+			})
+		})
+		.catch((error) =>
+			console.error("Erreur lors de la récupération des voitures :", error)
+		)
 }
 
 function modifyFom(gameData) {
